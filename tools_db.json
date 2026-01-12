@@ -1,0 +1,274 @@
+[
+    {
+        "name": "nmap",
+        "category": "Network Recon",
+        "description": "Network and port scanner",
+        "command": "nmap -sS -sV TARGET_IP",
+        "note": "Use only on authorized targets",
+        "keywords": ["scan", "network", "ports", "recon"]
+    },
+    {
+        "name": "airmon-ng",
+        "category": "Wireless",
+        "description": "Enable monitor mode on wireless interface",
+        "command": "airmon-ng start wlan0",
+        "note": "Requires compatible wireless card",
+        "keywords": ["wifi", "wireless", "monitor", "aircrack"]
+    },
+    {
+        "name": "airodump-ng",
+        "category": "Wireless",
+        "description": "Capture packets from wireless networks",
+        "command": "airodump-ng wlan0mon",
+        "note": "Use after enabling monitor mode",
+        "keywords": ["wifi", "capture", "handshake"]
+    },
+    {
+  "name": "nmap",
+  "category": "Scanning",
+  "description": "Network discovery and security auditing",
+  "command": "nmap -A target",
+  "note": "Most popular network scanner",
+  "keywords": ["network", "scan", "ports", "recon"]
+},
+{
+  "name": "whois",
+  "category": "OSINT",
+  "description": "Retrieve domain registration info",
+  "command": "whois example.com",
+  "note": "Useful for reconnaissance phase",
+  "keywords": ["domain", "whois", "osint", "info"]
+},
+{
+  "name": "theHarvester",
+  "category": "OSINT",
+  "description": "Gather emails, subdomains and hosts",
+  "command": "theHarvester -d example.com -b google",
+  "note": "Passive information gathering",
+  "keywords": ["emails", "osint", "recon"]
+},
+{
+  "name": "amass",
+  "category": "OSINT",
+  "description": "Advanced subdomain enumeration",
+  "command": "amass enum -d example.com",
+  "note": "Very powerful recon tool",
+  "keywords": ["subdomains", "osint", "dns"]
+},
+{
+  "name": "dnsenum",
+  "category": "OSINT",
+  "description": "DNS enumeration tool",
+  "command": "dnsenum example.com",
+  "note": "Find DNS records",
+  "keywords": ["dns", "enumeration"]
+},
+{
+  "name": "dnsrecon",
+  "category": "OSINT",
+  "description": "DNS reconnaissance",
+  "command": "dnsrecon -d example.com",
+  "note": "DNS mapping",
+  "keywords": ["dns", "osint"]
+},
+{
+  "name": "whatweb",
+  "category": "Web",
+  "description": "Identify web technologies",
+  "command": "whatweb example.com",
+  "note": "CMS and framework detection",
+  "keywords": ["web", "fingerprinting"]
+},
+{
+  "name": "nikto",
+  "category": "Web",
+  "description": "Web server vulnerability scanner",
+  "command": "nikto -h http://target",
+  "note": "Old but useful",
+  "keywords": ["web", "vulnerability"]
+},
+{
+  "name": "dirb",
+  "category": "Web",
+  "description": "Web content scanner",
+  "command": "dirb http://target",
+  "note": "Bruteforce directories",
+  "keywords": ["directories", "web"]
+},
+{
+  "name": "gobuster",
+  "category": "Web",
+  "description": "Directory and DNS brute force",
+  "command": "gobuster dir -u http://target -w wordlist",
+  "note": "Fast alternative to dirb",
+  "keywords": ["bruteforce", "web"]
+},
+{
+  "name": "wpscan",
+  "category": "Web",
+  "description": "WordPress vulnerability scanner",
+  "command": "wpscan --url http://target",
+  "note": "WordPress specific",
+  "keywords": ["wordpress", "cms"]
+},
+{
+  "name": "sqlmap",
+  "category": "Web",
+  "description": "Automatic SQL injection tool",
+  "command": "sqlmap -u \"url\"",
+  "note": "Very powerful",
+  "keywords": ["sql", "injection", "database"]
+},
+{
+  "name": "hydra",
+  "category": "Password",
+  "description": "Online password cracking",
+  "command": "hydra -l user -P passlist target service",
+  "note": "Supports many protocols",
+  "keywords": ["bruteforce", "password"]
+},
+{
+  "name": "medusa",
+  "category": "Password",
+  "description": "Parallel login brute-force tool",
+  "command": "medusa -h target -u user -P passlist -M ssh",
+  "note": "Fast and modular",
+  "keywords": ["bruteforce", "login"]
+},
+{
+  "name": "john",
+  "category": "Password",
+  "description": "Offline password cracker",
+  "command": "john hashes.txt",
+  "note": "Hash cracking",
+  "keywords": ["hash", "password"]
+},
+{
+  "name": "hashcat",
+  "category": "Password",
+  "description": "Advanced hash cracking",
+  "command": "hashcat -m 0 hash wordlist",
+  "note": "GPU accelerated",
+  "keywords": ["hash", "cracking"]
+},
+{
+  "name": "aircrack-ng",
+  "category": "Wireless",
+  "description": "WiFi security auditing",
+  "command": "aircrack-ng capture.cap",
+  "note": "Classic WiFi tool",
+  "keywords": ["wifi", "wireless"]
+},
+{
+  "name": "airodump-ng",
+  "category": "Wireless",
+  "description": "Capture wireless packets",
+  "command": "airodump-ng wlan0mon",
+  "note": "Packet capture",
+  "keywords": ["wifi", "sniffing"]
+},
+{
+  "name": "aireplay-ng",
+  "category": "Wireless",
+  "description": "Packet injection tool",
+  "command": "aireplay-ng -0 1 -a AP -c client wlan0mon",
+  "note": "Deauth attacks",
+  "keywords": ["wifi", "deauth"]
+},
+{
+  "name": "reaver",
+  "category": "Wireless",
+  "description": "WPS brute force attack",
+  "command": "reaver -i wlan0mon -b AP",
+  "note": "WPS attacks",
+  "keywords": ["wps", "wifi"]
+},
+{
+  "name": "wash",
+  "category": "Wireless",
+  "description": "Scan WPS-enabled APs",
+  "command": "wash -i wlan0mon",
+  "note": "Used with reaver",
+  "keywords": ["wps", "scan"]
+},
+{
+  "name": "ettercap",
+  "category": "MITM",
+  "description": "Man-in-the-middle attacks",
+  "command": "ettercap -G",
+  "note": "ARP poisoning",
+  "keywords": ["mitm", "sniffing"]
+},
+{
+  "name": "dsniff",
+  "category": "MITM",
+  "description": "Password sniffing tools",
+  "command": "dsniff",
+  "note": "Credential capture",
+  "keywords": ["sniffing", "password"]
+},
+{
+  "name": "bettercap",
+  "category": "MITM",
+  "description": "Modern MITM framework",
+  "command": "bettercap",
+  "note": "Replacement for ettercap",
+  "keywords": ["mitm", "network"]
+},
+{
+  "name": "responder",
+  "category": "Exploitation",
+  "description": "LLMNR and NBT-NS poisoning",
+  "command": "responder -I eth0",
+  "note": "Windows networks",
+  "keywords": ["windows", "hash"]
+},
+{
+  "name": "metasploit",
+  "category": "Exploitation",
+  "description": "Penetration testing framework",
+  "command": "msfconsole",
+  "note": "Core Kali tool",
+  "keywords": ["exploit", "framework"]
+},
+{
+  "name": "msfvenom",
+  "category": "Exploitation",
+  "description": "Payload generator",
+  "command": "msfvenom -p payload",
+  "note": "Used with metasploit",
+  "keywords": ["payload", "exploit"]
+},
+{
+  "name": "searchsploit",
+  "category": "Exploitation",
+  "description": "Exploit database search",
+  "command": "searchsploit apache",
+  "note": "Offline exploit search",
+  "keywords": ["exploit", "cve"]
+},
+{
+  "name": "crackmapexec",
+  "category": "Post-Exploitation",
+  "description": "Active Directory attack tool",
+  "command": "cme smb target",
+  "note": "Windows environments",
+  "keywords": ["active-directory", "windows"]
+},
+{
+  "name": "bloodhound",
+  "category": "Post-Exploitation",
+  "description": "AD privilege escalation paths",
+  "command": "bloodhound",
+  "note": "Graph based AD analysis",
+  "keywords": ["active-directory", "graph"]
+}
+    {
+        "name": "whois",
+        "category": "OSINT",
+        "description": "Retrieve domain registration info",
+        "command": "whois example.com",
+        "note": "Useful for reconnaissance phase",
+        "keywords": ["domain", "whois", "osint", "info"]
+    }
+]
