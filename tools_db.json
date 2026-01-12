@@ -263,7 +263,7 @@
   "note": "Graph based AD analysis",
   "keywords": ["active-directory", "graph"]
 }
-    {
+    {,
         "name": "whois",
         "category": "OSINT",
         "description": "Retrieve domain registration info",
